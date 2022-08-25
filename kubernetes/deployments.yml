@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring
-          image: imajeetyadav/spring-kubernetes:amd
+          image: imajeetyadav/spring-kubernetes:amd1
           ports:
             - containerPort: 80
           imagePullPolicy: Always
@@ -31,39 +31,39 @@ spec:
 #      nodeSelector:
 #        type: dev
 
-#---
-#
-#apiVersion: apps/v1
-#kind: Deployment
-#metadata:
-#  name: spring-app-v2
-#spec:
-#  replicas: 3
-#  selector:
-#    matchLabels:
-#      app: spring-app-v2
-#  template:
-#    metadata:
-#      labels:
-#        app: spring-app-v2
-#    spec:
-#      containers:
-#        - name: spring
-#          image: imajeetyadav/spring-kubernetes:0.0.2
-#          ports:
-#            - containerPort: 80
-#          imagePullPolicy: Always
-#          resources:
-#            requests:
-#              memory: "200Mi"
-#              cpu: "250m"
-#            limits:
-#              memory: "250Mi"
-#              cpu: "500m"
-#          env:
-#            - name: DEMO_ENV
-#              value: "Hello from the environment"
-#      nodeSelector:
-#        type: dev
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-app-v2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spring-app-v2
+  template:
+    metadata:
+      labels:
+        app: spring-app-v2
+    spec:
+      containers:
+        - name: spring
+          image: imajeetyadav/spring-kubernetes:amd2
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "200Mi"
+              cpu: "250m"
+            limits:
+              memory: "250Mi"
+              cpu: "500m"
+          env:
+            - name: DEMO_ENV
+              value: "Hello from the environment"
+      nodeSelector:
+        type: dev
 
 
