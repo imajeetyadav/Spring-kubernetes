@@ -11,6 +11,6 @@ steps:
     sourceGitRepositoryUri: 'https://github.com/imAjeetYadav/Spring-kubernetes.git'
     sourceGitRepositoryPersonalAccessToken: '$(GITHUB)'
     sourceVerifySSLCertificate: false
-    destinationGitRepositoryUri: 'https://imajeetyadav@dev.azure.com/imajeetyadav/Codingprotocols/_git/Spring-kubernetes'
+    destinationGitRepositoryUri: 'https://dev.azure.com/imajeetyadav/Codingprotocols/_git/Spring-kubernetes'
     destinationGitRepositoryPersonalAccessToken: '$(AZURE)'
     destinationVerifySSLCertificate: false
