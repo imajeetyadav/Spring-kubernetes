@@ -5,9 +5,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    
-  displayName: 'Run a multi-line script'
+- task: mirror-git-repository-vsts-task@1
+  displayName: Mirring Github to Azure
+  inputs:
+    sourceGitRepositoryUri: 'https://github.com/imAjeetYadav/Spring-kubernetes.git'
+    sourceGitRepositoryPersonalAccessToken: '$(GITHUB)'
+    sourceVerifySSLCertificate: false
+    destinationGitRepositoryUri: 'https://imajeetyadav@dev.azure.com/imajeetyadav/Codingprotocols/_git/Spring-kubernetes'
+    destinationGitRepositoryPersonalAccessToken: '$(AZURE)'
+    destinationVerifySSLCertificate: false
