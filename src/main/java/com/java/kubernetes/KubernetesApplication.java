@@ -13,7 +13,7 @@ public class KubernetesApplication {
 
 	@GetMapping(value = "/")
     public String helloWorld() {
-        String response = "<H1> Hello World   </H1>" + new Date();
+        String response = "<H1> Hello World V2   </H1>" + new Date();
         return response;
     }
 
