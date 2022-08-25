@@ -1,0 +1,16 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: mirror-git-repository-vsts-task@1
+  displayName: Mirring Github to Azure
+  inputs:
+    sourceGitRepositoryUri: 'https://dev.azure.com/imajeetyadav/Codingprotocols/_git/Spring-kubernetes'
+    sourceGitRepositoryPersonalAccessToken:  '$(AZURE)'
+    sourceVerifySSLCertificate: false
+    destinationGitRepositoryUri: 'https://github.com/imAjeetYadav/Spring-kubernetes.git'
+    destinationGitRepositoryPersonalAccessToken: '$(GITHUB)'
+    destinationVerifySSLCertificate: false
