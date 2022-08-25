@@ -14,9 +14,9 @@ steps:
 #     destinationGitRepositoryUri: 'https://github.com/imAjeetYadav/Spring-kubernetes.git'
 #     destinationGitRepositoryPersonalAccessToken: '$(GITHUB)'
 #     destinationVerifySSLCertificate: false
-# - task: CmdLine@2
-#   inputs:
-#     script: 'ls'
+- task: CmdLine@2
+  inputs:
+    script: 'ls'
 - task: mirror-git-repository-vsts-task@1
   displayName: Mirring Azure to Github
   inputs:
