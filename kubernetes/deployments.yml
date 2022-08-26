@@ -63,7 +63,7 @@ spec:
           env:
             - name: DEMO_ENV
               value: "Hello from the environment"
-      nodeSelector:
-        type: dev
+#      nodeSelector:
+#        type: dev
 
 
