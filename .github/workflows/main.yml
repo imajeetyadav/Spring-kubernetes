@@ -32,5 +32,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: 796080722547.dkr.ecr.ap-south-1.amazonaws.com/codingprotocols:latest
+          tags: 796080722547.dkr.ecr.ap-south-1.amazonaws.com/spring-kubernetes:latest
    
