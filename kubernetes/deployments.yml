@@ -32,13 +32,12 @@ spec:
 #        type: dev
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: spring-app-v2
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: spring-app-v2
@@ -65,5 +64,4 @@ spec:
               value: "Hello from the environment"
 #      nodeSelector:
 #        type: dev
-
 
